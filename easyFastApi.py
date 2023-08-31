@@ -1,4 +1,4 @@
-# use "uvicorn main:api --reload" command in an command line and start/launch a server
+# use "uvicorn easyFastApi:api --reload" command in an command line and start/launch a server
 from fastapi import FastAPI
 from typing import Optional
 from pydantic import BaseModel

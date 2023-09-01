@@ -1,4 +1,4 @@
-# 'type hints' in Python is just annotations in other languages like Java, so they don't make no sense in codes.
+# Type hints play a role as mere annotations and embeddable comments.
 from typing import List,Dict
 
 name:str="cats"

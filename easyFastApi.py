@@ -1,13 +1,21 @@
 # use "uvicorn easyFastApi:api --reload" command in an command line and start/launch a server
 from fastapi import FastAPI
-from typing import Optional
-from pydantic import BaseModel
+from typing import Optional,List
+from pydantic import BaseModel, Field
+
+class ShopInfo(BaseModel):
+  name:str
+  location:str
 
 class Item(BaseModel):
-  name:str
+  name:str=Field(min_length=1,max_length=25)
   description:Optional[str]=None
   price:int
   tax:Optional[float]=None
+
+class Data(BaseModel):
+  shop_info:Optional[ShopInfo]
+  items:List[Item]
 
 api=FastAPI() #make an instance
 
@@ -37,6 +45,10 @@ async def animal(animal_name:Optional[str]=None,animal_num:Optional[int]=None):
 
 
 # endpoints of 'post' method
+
+@api.post('/')
+async def index(data:Data):
+  return {'data':data}
 
 
 @api.post('/item/')

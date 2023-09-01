@@ -1,0 +1,22 @@
+{
+  "data": {
+    "shop_info": {
+      "name": "nekonosippo",
+      "location": "Tokyo"
+    },
+    "items": [
+      {
+        "name": "tail",
+        "description": "This is a tail of a cat",
+        "price": 100,
+        "tax": 1.1
+      },
+      {
+        "name": "a leg",
+        "description": "This is a leg of a cat",
+        "price": 200,
+        "tax": 1.1
+      }
+    ]
+  }
+}

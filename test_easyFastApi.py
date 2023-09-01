@@ -1,4 +1,4 @@
-# before execute this file , you should execute easyFastApi.py and check the url of the uvicorn server by access to '/docs' and execute api test , and so get the url and input the url to the variable 'url below' 
+# Before executing this file, execute 'easyFastApi.py' and start the UVicorn server. Then, access the '/docs' endpoint from a browser, perform a test with the 'POST' method, check the URL, and store that URL in the 'url' variable below. 
 import requests
 import json
 

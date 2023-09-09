@@ -5,7 +5,10 @@ def judge_score(nums):
     counter = Counter(nums)
     
     # 出現回数で降順ソート
+    # itemsメソッド：辞書型のキーと値のペアをタプルとして返すイテラブルを提供する
     sorted_items = sorted(counter.items(), key=lambda x: x[1], reverse=True)
+    # lambda:無名関数を作成数rためのキーワード、lambda x:x[1]⇔引数xを受け取り、x[1]を返す関数。x[0]はタプルの最初の要素(整数)であり、x[1]はタプルの二番目の要素(祖の整数の出現回数)
+    # reverse:True→ソートを昇順(デフォルト)ではなく、降順で行うかどうかを指定する→出現回数の多さに基づいてソートされる
     
     # 3回以上出現する数値が存在し、2つの数値が1回ずつ出現する場合
     if sorted_items[0][1] >= 3 and sorted_items[1][1] == 1 and sorted_items[2][1] == 1:

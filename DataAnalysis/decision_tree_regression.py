@@ -26,7 +26,8 @@ np.set_printoptions(precision=2)
 print(np.concatenate((y_pred.reshape(len(y_pred),1), y_test.reshape(len(y_test),1)),1))
 
 # Evaluating the Model Performance
-r2_score(y_test, y_pred)
+r2_score_result = r2_score(y_test, y_pred)
+print("R-squared (R2) Score:", r2_score_result)
 
 # 乱数生成のシード値とは:乱数生成器の初期化パラメータで、乱数生成の規則を指定するための値。
 # 【比較】
